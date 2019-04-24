@@ -1,5 +1,5 @@
 import Data.Maybe
-
+import System.Environment
 
 data Tree a b = Leaf a | Node b (Tree a b) (Tree a b) deriving (Show, Read)
 data OP = SUM | RES | MUL | DIV deriving (Show, Read)
