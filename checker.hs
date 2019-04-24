@@ -16,3 +16,7 @@ eval (Node SUM x y) = eval x + eval y
 eval (Node RES x y) = eval x - eval y
 eval (Node MUL x y) = eval x * eval y
 eval (Node DIV x y) = eval x / eval y
+
+main = do
+    string <- getLine
+    putStrLn $ show $ myRead string
