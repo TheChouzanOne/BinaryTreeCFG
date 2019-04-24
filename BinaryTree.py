@@ -6,7 +6,7 @@
 #       Node MUL (node sum (Leaf 49) (Leaf 104)) (Leaf 38)
 #
 
-from binarytree import Node
+from JLolibrary import Node
 
 simbols = {
     'SUM': '+',
