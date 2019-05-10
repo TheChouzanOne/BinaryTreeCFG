@@ -16,25 +16,18 @@ simbols = {
 }
 
 def createNode(line):
-    
     parent = Node(simbols[line[5:8].upper()])
-
     left_start = line.index('(')
     left_end = left_start
-
     left_stack = []
     for c in line[left_start: ]:
-
         if c == '(':
             left_stack.append(1)
         elif c == ')':
             left_stack.pop()
-
-
         if len(left_stack) == 0:
             break
         left_end += 1
-
     if(line[left_start + 1 : left_start + 5] == 'Leaf'):
         parent.left = Node(int(line[left_start + 6 : left_end]))
 
@@ -63,10 +56,8 @@ def createNode(line):
 
     else:
         parent.right = createNode(line[right_start + 1 : right_end])
-
     # print("(%s, %s)" % (left_start, left_end), '(%s, %s)' % (right_start, right_end))
     # print(root, '|', line[left_start + 1 : left_end], '|', line[right_start + 1 : right_end])
-
     return parent
 
 

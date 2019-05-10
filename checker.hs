@@ -8,7 +8,7 @@ myRead :: String -> Maybe (Double)
 myRead s = case reads s of
     [] -> Nothing
     x -> Just (eval $ getData x)
-        where getData ((d,x):xs) = d
+        where getData ((d,x):_) = d
 
 eval :: Tree Double OP -> Double
 eval (Leaf x) = x

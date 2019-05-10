@@ -17,6 +17,6 @@ try:
         else:
             print(bt.createNode(checkerInput))
             print('Result: ' + checkerOutput.split(' ')[1])
-
 except KeyboardInterrupt:
+    print()
     pass
