@@ -7,8 +7,7 @@ data OP = SUM | RES | MUL | DIV deriving (Show, Read)
 myRead :: String -> Maybe (Double)
 myRead s = case reads s of
     [] -> Nothing
-    x -> Just (eval $ getData x)
-        where getData ((d,x):_) = d
+    ((d,_):_) -> Just (eval d)
 
 eval :: Tree Double OP -> Double
 eval (Leaf x) = x
