@@ -1,7 +1,6 @@
 import os
 import BinaryTree as bt
 import subprocess
-
 try:
     system = input("Por favor indique su sistema operativo: [win|lin]: ")
     while(not (system == "win" or system == "lin")):
@@ -24,8 +23,11 @@ try:
         if(checkerOutput == 'Nothing'):
             print('Esa cadena no la reconoce nuestro lenguaje.')
         else:
-            print(bt.createNode(checkerInput))
-            print('Result: ' + checkerOutput.split(' ')[1])
+            try:
+                print(bt.createNode(checkerInput))
+                print('Result: ' + checkerOutput.split(' ')[1])
+            except:
+                print(checkerInput.split()[1])
 except KeyboardInterrupt:
     print()
     pass
